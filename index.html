@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenPedia - Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="asset/css/global.css">
+    <link rel="stylesheet" href="asset/css/animation.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="bg-[#F7F7F7]">
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/10 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 lg:h-20">
+                <div class="flex items-center space-x-2 cursor-pointer" onclick="scrollToSection('home')">
+                    <img src="./asset/images/logo.png" class="w-10 h-10 rounded-full object-cover" alt="logo gogreen">
+                    <span id="logo-text" class="text-xl font-bold text-gray-900">GreenPedia</span>
+                </div>
+                <div class="hidden lg:flex space-x-8">
+                    <a href="" class="text-sm font-semibold text-gray-900 hover:text-emerald-400 transition-colors">Home</a>
+                    <a href="about.html" class="text-sm font-semibold text-gray-900 hover:text-emerald-400 transition-colors">About</a>
+                    <a href="./page/education.html" class="text-sm font-semibold text-gray-900 hover:text-emerald-400 transition-colors">Education</a>
+                    <a href="./page/contact.html" class="text-sm font-semibold text-gray-900 hover:text-emerald-400 transition-colors">Contact</a>
+                </div>
+                <button id="menu-button" class="lg:hidden z-50 transition-colors text-white" onclick="toggleMenu()">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div id="menu-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden opacity-0 pointer-events-none"></div>
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 lg:hidden transform translate-x-full">
+        <div class="flex flex-col h-full">
+            <div class="flex justify-between items-center p-6 border-b">
+                <div class="flex items-center space-x-2">
+                    <img src="asset/images/logo.png" class="w-10 h-10 rounded-full object-cover">
+                    <span class="text-xl font-bold text-gray-900">GreenPedia</span>
+                </div>
+                <button onclick="toggleMenu()" class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex-1 overflow-y-auto p-6">
+                <div class="space-y-2">
+                    <a href="" class="mobile-nav-link block w-full text-left px-6 py-4 rounded-xl text-gray-700 hover:bg-gray-100 transition-all">
+                         <span class="text-lg font-semibold">Home</span>
+                    </a>
+                    <a href="about.html" class="mobile-nav-link block w-full text-left px-6 py-4 rounded-xl text-gray-700 hover:bg-gray-100 transition-all">
+                         <span class="text-lg font-semibold">About</span>
+                    </a>
+                   <a href="./page/education.html" class="mobile-nav-link block w-full text-left px-6 py-4 rounded-xl text-gray-700 hover:bg-gray-100 transition-all">
+                         <span class="text-lg font-semibold">Education</span>
+                   </a>
+                   <a href="./page/contact.html" class="mobile-nav-link block w-full text-left px-6 py-4 rounded-xl text-gray-700 hover:bg-gray-100 transition-all">
+                         <span class="text-lg font-semibold">Contact</span>
+                   </a>
+                </div>
+            </div>
+            <div class="p-6 border-t bg-gray-50">
+                <p class="text-sm text-gray-600 text-center">
+                    Environmental education for a greener Indonesia 🌱
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+            <source src="https://ik.imagekit.io/jd7q7b3jn/lv_0_20251126190111.mp4" type="video/mp4">
+        </video>
+        
+        <div class="absolute inset-0 bg-gradient-to-br from-cyan-600/40 via-blue-600/40 to-purple-700/40"></div>
+            <div class="absolute bottom-32 left-16 animate-float-arrow-2">
+            </div>
+
+        <div class="relative z-10 text-center px-4 animate-fadeInUp">
+            <h1 class="text-4xl md:text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-2xl leading-tight">
+                Empowering a greener future <br> through modern <br> environmental education
+            </h1>
+            <button onclick="scrollToSection('masalah')" class="px-8 py-3 bg-transparent border-2 border-white text-white rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 shadow-xl">
+                Learn More
+            </button>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+            <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="masalah" class="py-16 lg:py-24 bg-[#F7F7F7] relative overflow-hidden">
+        <div class="absolute top-10 right-10 w-32 h-32 bg-emerald-100 rounded-full opacity-50 animate-float-circle-1"></div>
+        <div class="absolute bottom-20 left-10 w-40 h-40 bg-blue-100 rounded-full opacity-40 animate-float-circle-2"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1" data-aos="fade-right" data-aos-duration="800">
+                    <h2 class="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#449C38] to-[#ABF257] bg-clip-text text-transparent mb-6">
+                        The Current Waste Problem
+                    </h2>
+                    <div class="text-gray-700 leading-relaxed">
+                        <p>The waste problem in our environment is becoming increasingly critical. Every day, the amount of waste continues to increase, while waste management methods are still not optimal. A lot of waste ends up in landfills, rivers, lakes, and even the ocean, causing unpleasant odors, floods, and soil and water pollution.</p>
+                        <p>Poorly managed organic waste produces methane gas, which is harmful to health and accelerates global climate change. On the other hand, inorganic waste like plastic takes hundreds of years to decompose and continues to accumulate in nature.</p>
+                        <p>This condition shows that real awareness and action are urgently needed to manage waste. If left unchecked, the impact will be increasingly significant for the environment and our lives.</p>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 relative">
+                        <img src="asset/images/sampah.jpg" alt="Landfill" class="w-full h-auto">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-20 bg-[#F7F7F7] relative overflow-hidden">
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-emerald-200 rounded-full mix-blend-multiply filter blur-xl animate-float-circle-1"></div>
+            <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl animate-float-circle-2"></div>
+            <div class="absolute -bottom-8 left-20 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl animate-float-circle-3"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10 mt-200" data-aos="fade-up" data-aos-duration="800">
+            <h2 class="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[#449C38] to-[#ABF257] bg-clip-text text-transparent mb-6">
+               Let's take care of<br>our home together.
+            </h2>
+            <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+              We provide educational materials about waste, organic matter, and environmental management. Press the 'Education' button to view the complete educational materials.
+            </p>
+            <a href="" class="px-10 py-4 bg-[#25CC18] text-white rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105 shadow-lg font-bold">
+                Education
+            </a>
+        </div>
+    </section>
+
+    <section id="dampak" class="py-16 lg:py-24 bg-gray-900 text-white relative overflow-hidden mt-4">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500 rounded-full mix-blend-screen filter blur-3xl animate-float-circle-1"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl animate-float-circle-2"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" data-aos="fade-up" data-aos-duration="800">
+            <div class="mb-16" id="stats-section">
+                <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12">
+                    OUR POSITIVE ENVIRONMENTAL IMPACT
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 bg-gray-800 rounded-xl transform hover:scale-105 transition-all duration-300">
+                        <p class="text-sm text-gray-400 mb-2">Recycled waste</p>
+                        <p class="text-5xl lg:text-6xl font-bold mb-2" id="counter-waste">0</p>
+                        <p class="text-gray-400">million tons</p>
+                    </div>
+                    <div class="text-center p-6 bg-gray-800 rounded-xl transform hover:scale-105 transition-all duration-300">
+                        <p class="text-sm text-gray-400 mb-2">Active waste bank points</p>
+                        <p class="text-5xl lg:text-6xl font-bold mb-2" id="counter-banks">0</p>
+                        <p class="text-gray-400">Unit</p>
+                    </div>
+                    <div class="text-center p-6 bg-gray-800 rounded-xl transform hover:scale-105 transition-all duration-300">
+                        <p class="text-sm text-gray-400 mb-2">CO² emissions successfully avoided</p>
+                        <p class="text-5xl lg:text-6xl font-bold mb-2" id="counter-co2">0</p>
+                        <p class="text-gray-400">millions tons</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16" data-aos="fade-up" data-aos-duration="800">
+                <h3 class="text-3xl font-bold text-center mb-8">GreenPedia IMPACT</h3>
+                <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl">
+                    <div id="map" class="w-full h-96 lg:h-[500px]"></div>
+                </div>
+            </div>
+            <hr>
+            <div class="grid md:grid-cols-3 gap-8 mb-12 mt-12" data-aos="fade-up" data-aos-duration="1000">
+                <div class="bg-gray-800 rounded-xl overflow-hidden transform hover:scale-105 transition-all duration-300 group relative">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="asset/images/krisissampah.jpg" alt="Krisis Sampah" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-3">WASTE CRISIS</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">The waste problem in Indonesia is becoming increasingly concerning every day. Population growth, high consumption behavior, and a lack of waste sorting are causing a drastic increase in waste volume. Many areas are reporting that their landfills are almost full or even exceeding capacity.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl overflow-hidden transform hover:scale-105 transition-all duration-300 group relative">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="asset/images/organik.jpg" alt="Sampah Organik" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-3">PROCESSING ORGANIC WASTE</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">Organic waste is the easiest type of waste to manage and provides direct benefits when processed correctly.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl overflow-hidden transform hover:scale-105 transition-all duration-300 group relative">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="asset/images/tpu.jpg" alt="Dampak Sampah" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-3">IMPACT OF WASTE</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">Many people are still unaware that waste significantly contributes to climate change. When organic waste accumulates in landfills without oxygen, the decomposition process produces methane gas—a greenhouse gas 28 times more potent than CO₂.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#121212] text-white py-12" data-aos="fade-up" data-aos-duration="250">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="asset/images/logo.png" 
+                             alt="Gogreen Logo" class="w-10 h-10 rounded-full object-cover">
+                        <span class="text-xl font-bold">GreenPedia</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Interactive and modern environmental education for a greener Indonesia.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <a href="" class="block hover:text-emerald-400 transition-colors">Home</a>
+                        <a href="about.html" class="block hover:text-emerald-400 transition-colors">About</a>
+                        <a href="./page/education.html" class="block hover:text-emerald-400 transition-colors">Education</a>
+                        <a href="./page/contact.html" class="block hover:text-emerald-400 transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <div class="space-y-2 text-gray-400 text-sm">
+                        <p>Email: info@greenpedia.id</p>
+                        <p>Phone: +62 123 4567 890</p>
+                        <p>Location: Jakarta, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 GreenPedia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="asset/js/index.js"></script>
+    <script src="asset/js/educ.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
