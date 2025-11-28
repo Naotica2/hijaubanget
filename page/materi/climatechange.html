@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental pollution - GreenPedia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="../../asset/css/global.css">
+</head>
+<body class="bg-[#F7F7F7]">
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/10 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 lg:h-20">
+                <div class="flex items-center space-x-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold">
+                        <img src="../../asset/images/logo.png" alt="logo">
+                    </div>
+                    <span id="logo-text" class="text-xl font-bold transition-colors duration-300 text-gray-900">GreenPedia</span>
+                </div>
+                <div class="hidden lg:flex space-x-8">
+                    <a href="../../index.html" class="nav-link text-sm font-semibold transition-colors text-gray-900 hover:text-emerald-600">Home</a>
+                    <a href="../../about.html" class="nav-link text-sm font-semibold transition-colors text-gray-900 hover:text-emerald-600">About</a>
+                    <a href="../../page/education.html" class="nav-link-active text-sm font-semibold transition-colors text-gray-900">Education</a>
+                    <a href="../../contact.html" class="nav-link text-sm font-semibold transition-colors text-gray-900 hover:text-emerald-600">Contact</a>
+                </div>
+                <button id="menu-button" class="lg:hidden z-50 transition-colors text-gray-900" onclick="toggleMenu()">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="menu-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 lg:hidden transform translate-x-full transition-transform duration-300">
+        <div class="flex flex-col h-full">
+            <div class="flex justify-between items-center p-6 border-b">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold">
+                        <img src="../../asset/images/logo.png" alt=logo">
+                    </div>
+                    <span class="text-xl font-bold text-black">GreenPedia</span>
+                </div>
+                <button onclick="toggleMenu()" class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex-1 overflow-y-auto p-6">
+                <div class="space-y-2">
+                    <a href="../../index.html" class="mobile-nav-link block w-full text-left px-6 py-4 rounded-xl text-gray-700 hover:bg-gray-100 transition-all">
+                        <span class="text-lg font-semibold">Home</span>
+                    </a>
+                    <a href="../../about.html" class="mobile-nav-link block w-full text-left px-6 py-4 rounded-xl text-gray-700 hover:bg-gray-100 transition-all">
+                        <span class="text-lg font-semibold">About</span>
+                    </a>
+                    <a href="../../education.html" class="mobile-nav-link block w-full text-left px-6 py-4 rounded-xl text-gray-700 transition-all">
+                        <span class="text-lg font-semibold">Education</span>
+                    </a>
+                    <a href="../../contact.html" class="mobile-nav-link block w-full text-left px-6 py-4 rounded-xl text-gray-700 hover:bg-gray-100 transition-all">
+                        <span class="text-lg font-semibold">Contact</span>
+                    </a>
+                </div>
+            </div>
+            <div class="p-6 border-t bg-gray-50">
+                <p class="text-sm text-gray-600 text-center">
+                    Environmental education for a greener Indonesia 🌱
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center space-x-2 mb-6">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                </div>
+                <span class="text-sm font-semibold text-gray-600 uppercase tracking-wide">Education</span>
+            </div>
+            <h1 class="font-merry text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[#449C38] to-[#ABF257] bg-clip-text text-transparent mb-6 leading-tight">
+                Memahami Perubahan Iklim: Dari Pemanasan Global hingga Upaya Penanggulangan
+            </h1>
+            <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+               Pembahasan mendalam mengenai penyebab perubahan iklim, gas rumah kaca, dampaknya terhadap bumi, dan solusi untuk masa depan.
+            </p>
+            <div class="rounded-2xl overflow-hidden mb-8 shadow-lg">
+                <img src="../../asset/images/perubahaniklim.jpg" alt="Organic waste composting" class="w-full h-auto object-cover">
+            </div>
+            <div class="flex flex-wrap gap-4 mb-8" onclick="alert('males hehehe')">
+                <button class="flex items-center space-x-2 px-5 py-3 bg-white border-2 border-gray-300 rounded-full font-semibold text-gray-700 hover:border-emerald-600 hover:text-emerald-600 transition-all shadow-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <span>Download PDF</span>
+                </button>
+            </div>
+            <div class="flex flex-wrap gap-3 pb-8 border-b b    order-gray-200">
+                <span class="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold">#organic</span>
+                <span class="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold">#anorganic</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-[#FDFFF7] rounded-2xl shadow-sm p-6 sm:p-10 lg:p-12">
+                <div class="article-content">
+                    <p>
+                    <b>Perubahan Iklim Global</b> – Perubahan iklim merupakan suatu perubahan jangka panjang dalam pola cuaca tertentu di suatu wilayah. Perubahan iklim ini sendiri sering dikaitkan dengan pemanasan global. Pemanasan global adalah kenaikan pada suhu Bumi yang kemudian berlangsung selama satu dekade atau lebih dimana salah satu penyebabnya adalah perubahan iklim. Simak pembahasan lebih lengkap mengenai Perubahan Iklim Global yaitu mulai dari <b>Definisi, Faktor Penyebab, Dampak, dan Upaya Penanggulangannya</b> berikut ini, check these out!
+                    <br><br>
+                    <b>Pengertian Perubahan Iklim</b>
+                    <br>
+                    Iklim merupakan rata-rata cuaca yang juga menjadi penanda keadaan atmosfer dalam suatu kurun waktu tertentu. Iklim juga didefinisikan sebagai ukuran variabilitas kuantitas serta rata-rata yang relevan dari sebuah variabel tertentu yaitu curah hujan, temperatur, atau angin pada suatu periode tertentu, yang umumnya merentang dari bulan hingga tahunan atau bahkan hingga jutaan tahun.
+                    <br><br>
+                    Iklim sendiri berubah secara terus menerus karena adanya interaksi antara suatu komponen dan faktor eksternal misalnya saja pada <b>erupsi vulkanik, variasi sinar matahari, serta aktivitas manusia</b> seperti perubahan penggunaan lahan dan penggunaan bahan bakar fosil.
+                    <br><br>
+                    Konvensi Perserikatan Bangsa-Bangsa (PBB) menyatakan bahwa perubahan iklim disebabkan oleh aktivitas manusia baik secara langsung maupun tidak langsung yang mengubah variabilitas iklim alami dan komposisi atmosfer global.
+                    <br><br>
+                    Komposisi atmosfer global ini mencakup <b>Gas Rumah Kaca (GRK)</b> seperti Nitrogen, Karbon Dioksida, Metana, dan lainnya. Gas-gas ini sebenarnya diperlukan untuk menjaga suhu Bumi tetap stabil, namun ketika konsentrasinya meningkat, atmosfer menjadi semakin tebal dan panas bumi terperangkap di atmosfer.
+                    <br><br>
+                    <b>Penyebab Perubahan Iklim</b>
+                    <br><br>
+                    <b>1. Efek Rumah Kaca</b>
+                    <br>
+                    Gas Rumah Kaca seperti CO2, Metana, N2O, dan gas berfluorinasi memerangkap panas di atmosfer. Aktivitas manusia seperti pembakaran minyak, batu bara, dan gas meningkatkan konsentrasi gas-gas ini. Konsentrasi CO2 kini 40% lebih tinggi dibanding awal industrialisasi.
+                    <br><br>
+                    <b>2. Peningkatan Emisi</b>
+                    <br>
+                    Emisi berasal dari pembakaran bahan bakar fosil, penebangan hutan (deforestasi), peternakan besar, dan penggunaan pupuk kimia. Penebangan hutan mengurangi kemampuan bumi menyerap CO2, sementara peternakan menghasilkan metana dalam jumlah besar.
+                    <br><br>
+                    <b>3. Pemanasan Global</b>
+                    <br>
+                    Pembangkit listrik dan industri merupakan penghasil CO2 utama. Suhu rata-rata global kini sekitar 0,85°C lebih tinggi dibanding akhir abad ke-19. Jika kenaikan suhu mencapai 2°C, risiko bencana lingkungan meningkat drastis.
+                    <br><br>
+                    <b>4. Perubahan Orbit Bumi</b>
+                    <br>
+                    Orbit bumi mengalami perubahan alami yang memengaruhi jarak bumi dari matahari. Ketika lebih dekat, iklim menjadi lebih hangat. Namun kenaikan suhu dua abad terakhir ini jauh melebihi perubahan alami tersebut.
+                    <br><br>
+                    <b>Dampak Perubahan Iklim</b>
+                    <br>
+                    Perubahan iklim mempengaruhi pola cuaca, pangan, air, tempat tinggal, serta kesehatan manusia. Indonesia berisiko mengalami musim kemarau lebih panjang, curah hujan tidak menentu, kekeringan ekstrem, peningkatan permukaan air laut, hingga gelombang panas.
+                    <br><br>
+                    <b>1. Kepunahan Ekosistem</b>
+                    <br>
+                    Kenaikan CO2 dan suhu global 1,5–2,5°C dapat menyebabkan kepunahan 20–30% spesies. Laut juga menjadi lebih asam sehingga merusak terumbu karang.
+                    <br><br>
+                    <b>2. Pangan dan Hasil Hutan</b>
+                    <br>
+                    Perubahan iklim membuat produktivitas pertanian menurun, meningkatkan risiko kelaparan, gagal panen, serta merusak kualitas tanah. Hutan kehilangan kemampuan menyimpan air, menurun fungsinya sebagai penyaring polusi, dan keanekaragaman hayati ikut terancam.
+                    <br><br>
+                    <b>Upaya Menanggulangi Perubahan Iklim</b>
+                    <br>
+                    Meski emisi terus meningkat, terdapat banyak langkah sektor nasional dan global yang dapat dilakukan:
+                    <br><br>
+                    <b>1. Sektor Energi</b>
+                    <br>
+                    Mengurangi subsidi bahan bakar fosil, menerapkan pajak karbon, dan meningkatkan penggunaan energi terbarukan.
+                    <br><br>
+                    <b>2. Sektor Transportasi</b>
+                    <br>
+                    Menggalakkan biofuel, transportasi umum, kendaraan rendah emisi, serta mengurangi kendaraan pribadi.
+                    <br><br>
+                    <b>3. Sektor Gedung</b>
+                    <br>
+                    Meningkatkan standar bangunan hemat energi, penggunaan peralatan berlabel efisiensi energi, dan perencanaan kota yang lebih hijau.
+                    <br><br>
+                    <b>4. Sektor Industri</b>
+                    <br>
+                    Standarisasi energi, pengurangan limbah industri, serta peningkatan teknologi produksi rendah emisi.
+                    <br><br>
+                    <b>5. Sektor Kehutanan</b>
+                    <br>
+                    Menekan deforestasi, memperluas area hutan, reforestasi, restorasi gambut, dan memberikan insentif pada pengelolaan hutan berkelanjutan.
+                    <br><br>
+                    <b>6. Sektor Pertanian dan Pangan</b>
+                    <br>
+                    Mengurangi limbah makanan, meningkatkan pertanian berkelanjutan, mengurangi ketergantungan pada protein hewani, dan menciptakan sistem pangan yang lebih adil secara global.
+                    <br><br>
+                    Menurut Emissions Gap Report, sistem pangan dapat mengurangi 6,7 gigaton CO2 jika dikelola dengan benar, menjadikannya sektor terbesar kedua setelah energi dalam potensi pengurangan emisi.
+                    <br><br>
+                    </p>
+                </div>
+            </div>
+            <div class="mt-16" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-merry text-2xl font-bold text-gray-900 mb-8">Related Resources</h3>
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer" onclick="window.location.href='organicanorganic.html'">
+                        <img src="../../asset/images/artc.jpeg" alt="organic anorganic" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg mb-2 text-gray-900">Organic and Inorganic waste</h4>
+                            <p class="text-gray-600 text-sm">Learn the differences and how to manage them</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer" onclick="window.location.href='envpollution.html'">
+                        <img src="../../asset/images/pencemaran.jpg" alt="environmental pollution" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg mb-2 text-gray-900">Environmental Pollution</h4>
+                            <p class="text-gray-600 text-sm">Learn the basic of environment pollution</p>
+                        </div>
+                    </div>
+                      <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer" onclick="window.location.href='wastemanagement.html'">
+                        <img src="../../asset/images/pengsampah.jpg" alt="waste management" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg mb-2 text-gray-900">Waste Management</h4>
+                            <p class="text-gray-600 text-sm">Effective waste management method</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#121212] py-12 text-white" data-aos="fade-up" data-aos-duration="500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold">
+                            <img src="../../asset/images/logo.png" alt="">
+                        </div>
+                        <span class="text-xl font-bold">GreenPedia</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Interactive and modern environmental education for a greener Indonesia.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <a href="../../index.html" class="block hover:text-emerald-400 transition-colors">Home</a>
+                        <a href="../../about.html" class="block hover:text-emerald-400 transition-colors">About</a>
+                        <a href="../../education.html" class="block hover:text-emerald-400 transition-colors">Education</a>
+                        <a href="../../contact.html" class="block hover:text-emerald-400 transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <div class="space-y-2 text-gray-400 text-sm">
+                        <p>Email: info@greenpedia.id</p>
+                        <p>Phone: +62 123 4567 890</p>
+                        <p>Location: Jakarta, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 GreenPedia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../../asset/js/resourc.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+     AOS.init();
+    </script>
+</body>
+</html>

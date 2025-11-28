@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Makes Organic and Anorganic Waste So Different? - GreenPedia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="../../asset/css/global.css">
+</head>
+<body class="bg-[#F7F7F7]">
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/10 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 lg:h-20">
+                <div class="flex items-center space-x-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold">
+                        <img src="../../asset/images/logo.png" alt="logo">
+                    </div>
+                    <span id="logo-text" class="text-xl font-bold transition-colors duration-300 text-gray-900">GreenPedia</span>
+                </div>
+                <div class="hidden lg:flex space-x-8">
+                    <a href="../../index.html" class="nav-link text-sm font-semibold transition-colors text-gray-900 hover:text-emerald-600">Home</a>
+                    <a href="../../about.html" class="nav-link text-sm font-semibold transition-colors text-gray-900 hover:text-emerald-600">About</a>
+                    <a href="../../page/education.html" class="nav-link-active text-sm font-semibold transition-colors text-gray-900">Education</a>
+                    <a href="../../contact.html" class="nav-link text-sm font-semibold transition-colors text-gray-900 hover:text-emerald-600">Contact</a>
+                </div>
+                <button id="menu-button" class="lg:hidden z-50 transition-colors text-gray-900" onclick="toggleMenu()">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="menu-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 lg:hidden transform translate-x-full transition-transform duration-300">
+        <div class="flex flex-col h-full">
+            <div class="flex justify-between items-center p-6 border-b">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold">
+                        <img src="../../asset/images/logo.png" alt=logo">
+                    </div>
+                    <span class="text-xl font-bold text-black">GreenPedia</span>
+                </div>
+                <button onclick="toggleMenu()" class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex-1 overflow-y-auto p-6">
+                <div class="space-y-2">
+                    <a href="../../index.html" class="mobile-nav-link block w-full text-left px-6 py-4 rounded-xl text-gray-700 hover:bg-gray-100 transition-all">
+                        <span class="text-lg font-semibold">Home</span>
+                    </a>
+                    <a href="../../about.html" class="mobile-nav-link block w-full text-left px-6 py-4 rounded-xl text-gray-700 hover:bg-gray-100 transition-all">
+                        <span class="text-lg font-semibold">About</span>
+                    </a>
+                    <a href="../../education.html" class="mobile-nav-link block w-full text-left px-6 py-4 rounded-xl text-gray-700 transition-all">
+                        <span class="text-lg font-semibold">Education</span>
+                    </a>
+                    <a href="../../contact.html" class="mobile-nav-link block w-full text-left px-6 py-4 rounded-xl text-gray-700 hover:bg-gray-100 transition-all">
+                        <span class="text-lg font-semibold">Contact</span>
+                    </a>
+                </div>
+            </div>
+            <div class="p-6 border-t bg-gray-50">
+                <p class="text-sm text-gray-600 text-center">
+                    Environmental education for a greener Indonesia 🌱
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center space-x-2 mb-6">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                </div>
+                <span class="text-sm font-semibold text-gray-600 uppercase tracking-wide">Education</span>
+            </div>
+            <h1 class="font-merry text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[#449C38] to-[#ABF257] bg-clip-text text-transparent mb-6 leading-tight">
+                Mengapa Sampah Organik dan Anorganik Memiliki Perbedaan yang Sangat Penting?
+            </h1>
+            <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+                Banyak orang tidak menyadari betapa berbeda perilaku kedua jenis sampah ini dan dampaknya terhadap lingkungan kita.
+            </p>
+            <div class="rounded-2xl overflow-hidden mb-8 shadow-lg">
+                <img src="../../asset/images/artc.jpeg" alt="Organic waste composting" class="w-full h-auto object-cover">
+            </div>
+            <div class="flex flex-wrap gap-4 mb-8" onclick="alert('males hehehe')">
+                <button class="flex items-center space-x-2 px-5 py-3 bg-white border-2 border-gray-300 rounded-full font-semibold text-gray-700 hover:border-emerald-600 hover:text-emerald-600 transition-all shadow-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <span>Download PDF</span>
+                </button>
+            </div>
+            <div class="flex flex-wrap gap-3 pb-8 border-b border-gray-200">
+                <span class="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold">#organic</span>
+                <span class="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold">#anorganic</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-[#FDFFF7] rounded-2xl shadow-sm p-6 sm:p-10 lg:p-12">
+                <div class="article-content">
+                    <p>
+                    Sampah merupakan sesuatu yang tidak dapat dihindari dalam kehidupan sehari-hari. Menurut Kamus Besar Bahasa Indonesia (KBBI) sampah adalah barang atau benda yang dibuang karena tidak terpakai lagi dan sebagainya; kotoran seperti daun, kertas.
+                    <br><br>
+                    Berdasarkan asalnya, sampah dibagi menjadi dua, yaitu sampah organik dan non-organik. Dalam upaya mengelola sampah dengan baik, penting untuk memahami perbedaan antara sampah organik dan non-organik karena keduanya memiliki karakteristik dan cara pengolahan yang berbeda.
+                    <br><br>
+                    Di artikel ini kita akan membahas perbedaan antara sampah organik dan non-organik, serta memberikan contoh untuk masing-masing jenis sampah.
+                    <br><br>
+                    <b>Sampah Organik</b>
+                    <br>
+                    Sampah organik adalah jenis sampah yang berasal dari bahan-bahan yang bisa membusuk dan terurai secara alami. Sampah organik mayoritas terdiri dari sisa makanan, dedaunan, potongan buah, sayuran, bangkai hewan, dan bahan organik lainnya.
+                    <br><br>
+                    Proses penguraian alami dari sampah organik disebut sebagai dekomposisi, di mana mikroorganisme seperti bakteri dan jamur membantu memecah bahan organik menjadi komponen yang lebih sederhana.
+                    <br><br>
+                    <b>Contoh Sampah Organik:</b>
+                    <br>
+                    • Sisa makanan: kulit buah, sayuran, sisa nasi, roti, dll.
+                    <br>
+                    • Daun dan rumput: dedaunan yang dipangkas, rumput yang dicabut, dll.
+                    <br>
+                    • Sisa-sisa tanaman: batang, ranting, atau dedaunan hasil panen.
+                    <br>
+                    • Kertas dan kardus yang terkontaminasi makanan.
+                    <br><br>
+                    <b>Sampah Non-Organik</b>
+                    <br>
+                    Sampah non-organik, atau sampah anorganik, adalah jenis sampah yang tidak mudah terurai secara alami. Sampah ini biasanya berasal dari bahan buatan manusia, seperti plastik, kertas berlapis, logam, kaca, dan bahan kimia sintetis.
+                    <br><br>
+                    Karena tidak mudah terurai, sampah non-organik seringkali menyebabkan masalah lingkungan yang serius, termasuk pencemaran tanah dan air serta ancaman bagi satwa liar.
+                    <br><br>
+                    <b>Contoh Sampah Non-Organik:</b>
+                    <br>
+                    • Plastik: botol plastik, kantong plastik, wadah plastik, dll.
+                    <br>
+                    • Logam: kaleng, sisa kawat, tutup botol, dll.
+                    <br>
+                    • Kaca: botol kaca, pecahan kaca, kaca jendela.
+                    <br>
+                    • Bahan kimia: baterai, cat, obat-obatan kedaluwarsa.
+                    <br>
+                    • Kertas berlapis plastik atau logam.
+                    <br><br>
+                    <b>Perbedaan antara Sampah Organik dan Non-Organik:</b>
+                    <br>
+                    • Asal usul: sampah organik berasal dari bahan alami seperti makanan dan tanaman, sedangkan sampah non-organik berasal dari bahan buatan manusia seperti plastik dan logam.
+                    <br>
+                    • Kemampuan penguraian: sampah organik mudah terurai melalui proses alami, sementara sampah non-organik memerlukan waktu lama atau bahkan tidak dapat terurai sama sekali.
+                    <br>
+                    • Dampak lingkungan: sampah organik yang membusuk biasanya tidak menimbulkan dampak negatif, sedangkan sampah non-organik dapat mencemari tanah, air, dan merusak ekosistem.
+                    <br>
+                    • Cara pengolahan: sampah organik dapat diolah menjadi kompos, sedangkan sampah non-organik memerlukan proses daur ulang atau pengolahan khusus.
+                    <br><br>
+                    <b>Manfaat Sampah Organik dan Non-Organik</b>
+                    <br><br>
+                    <b>Manfaat Sampah Organik:</b>
+                    <br>
+                    • Pembuatan pupuk kompos: sampah organik dapat diolah menjadi kompos yang kaya nutrisi untuk menyuburkan tanah.
+                    <br>
+                    • Energi terbarukan: sampah organik dapat diproses menjadi biogas sebagai sumber energi ramah lingkungan.
+                    <br>
+                    • Mengurangi penumpukan sampah: pengolahan yang tepat dapat mengurangi volume sampah yang dibuang ke TPA.
+                    <br><br>
+                    <b>Manfaat Sampah Non-Organik:</b>
+                    <br>
+                    • Daur ulang bahan baku: plastik, logam, dan kertas dapat didaur ulang untuk mengurangi penggunaan sumber daya alam.
+                    <br>
+                    • Energi dari sampah (Waste-to-Energy): sampah non-organik tertentu dapat digunakan sebagai bahan bakar untuk menghasilkan energi.
+                    <br>
+                    • Material konstruksi alternatif: beberapa sampah seperti botol plastik dapat dimanfaatkan sebagai bahan bangunan.
+                    <br>
+                    • Kerajinan dan seni: berbagai jenis sampah non-organik dapat dijadikan karya seni atau kerajinan kreatif.
+                    <br><br>
+                    Sampah organik dan non-organik sama-sama memiliki manfaat jika dikelola dengan benar. Sampah organik dapat menjadi kompos atau biogas, sedangkan sampah non-organik bisa didaur ulang atau dimanfaatkan sebagai sumber energi. Dengan pengelolaan yang tepat, sampah dapat menjadi sumber daya berharga sekaligus mengurangi dampaknya terhadap lingkungan.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-16" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-merry text-2xl font-bold text-gray-900 mb-8">Related Resources</h3>
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer" onclick="window.location.href='envpollution.html'">
+                        <img src="../../asset/images/pencemaran.jpg" alt="organic anorganic" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg mb-2 text-gray-900">Environmental Pollution</h4>
+                            <p class="text-gray-600 text-sm">Learn the basic of environment pollution</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer" onclick="window.location.href='wastemanagement.html'">
+                        <img src="../../asset/images/pengsampah.jpg" alt="waste management" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg mb-2 text-gray-900">Waste Management</h4>
+                            <p class="text-gray-600 text-sm">Effective waste management method</p>
+                        </div>
+                    </div>
+                      <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer" onclick="window.location.href='climatechange.html'">
+                        <img src="../../asset/images/perubahaniklim.jpg " alt="climate change" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg mb-2 text-gray-900">Climate Change</h4>
+                            <p class="text-gray-600 text-sm">How waste contributes to global warming and why it matters</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#121212] py-12 text-white" data-aos="fade-up" data-aos-duration="500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold">
+                            <img src="../../asset/images/logo.png" alt="">
+                        </div>
+                        <span class="text-xl font-bold">GreenPedia</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Interactive and modern environmental education for a greener Indonesia.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <a href="../../index.html" class="block hover:text-emerald-400 transition-colors">Home</a>
+                        <a href="../../about.html" class="block hover:text-emerald-400 transition-colors">About</a>
+                        <a href="../../education.html" class="block hover:text-emerald-400 transition-colors">Education</a>
+                        <a href="../../contact.html" class="block hover:text-emerald-400 transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <div class="space-y-2 text-gray-400 text-sm">
+                        <p>Email: info@greenpedia.id</p>
+                        <p>Phone: +62 123 4567 890</p>
+                        <p>Location: Jakarta, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 GreenPedia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../../asset/js/resourc.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+     AOS.init();
+    </script>
+</body>
+</html>

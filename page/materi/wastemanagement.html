@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental pollution - GreenPedia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="../../asset/css/global.css">
+</head>
+<body class="bg-[#F7F7F7]">
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/10 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 lg:h-20">
+                <div class="flex items-center space-x-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold">
+                        <img src="../../asset/images/logo.png" alt="logo">
+                    </div>
+                    <span id="logo-text" class="text-xl font-bold transition-colors duration-300 text-gray-900">GreenPedia</span>
+                </div>
+                <div class="hidden lg:flex space-x-8">
+                    <a href="../../index.html" class="nav-link text-sm font-semibold transition-colors text-gray-900 hover:text-emerald-600">Home</a>
+                    <a href="../../about.html" class="nav-link text-sm font-semibold transition-colors text-gray-900 hover:text-emerald-600">About</a>
+                    <a href="../../page/education.html" class="nav-link-active text-sm font-semibold transition-colors text-gray-900">Education</a>
+                    <a href="../../contact.html" class="nav-link text-sm font-semibold transition-colors text-gray-900 hover:text-emerald-600">Contact</a>
+                </div>
+                <button id="menu-button" class="lg:hidden z-50 transition-colors text-gray-900" onclick="toggleMenu()">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="menu-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 lg:hidden transform translate-x-full transition-transform duration-300">
+        <div class="flex flex-col h-full">
+            <div class="flex justify-between items-center p-6 border-b">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold">
+                        <img src="../../asset/images/logo.png" alt=logo">
+                    </div>
+                    <span class="text-xl font-bold text-black">GreenPedia</span>
+                </div>
+                <button onclick="toggleMenu()" class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex-1 overflow-y-auto p-6">
+                <div class="space-y-2">
+                    <a href="../../index.html" class="mobile-nav-link block w-full text-left px-6 py-4 rounded-xl text-gray-700 hover:bg-gray-100 transition-all">
+                        <span class="text-lg font-semibold">Home</span>
+                    </a>
+                    <a href="../../about.html" class="mobile-nav-link block w-full text-left px-6 py-4 rounded-xl text-gray-700 hover:bg-gray-100 transition-all">
+                        <span class="text-lg font-semibold">About</span>
+                    </a>
+                    <a href="../../education.html" class="mobile-nav-link block w-full text-left px-6 py-4 rounded-xl text-gray-700 transition-all">
+                        <span class="text-lg font-semibold">Education</span>
+                    </a>
+                    <a href="../../contact.html" class="mobile-nav-link block w-full text-left px-6 py-4 rounded-xl text-gray-700 hover:bg-gray-100 transition-all">
+                        <span class="text-lg font-semibold">Contact</span>
+                    </a>
+                </div>
+            </div>
+            <div class="p-6 border-t bg-gray-50">
+                <p class="text-sm text-gray-600 text-center">
+                    Environmental education for a greener Indonesia 🌱
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center space-x-2 mb-6">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                </div>
+                <span class="text-sm font-semibold text-gray-600 uppercase tracking-wide">Education</span>
+            </div>
+            <h1 class="font-merry text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[#449C38] to-[#ABF257] bg-clip-text text-transparent mb-6 leading-tight">
+                Pengelolaan Sampah di Indonesia: Sistem, Tantangan, dan Solusi Berkelanjutan
+            </h1>
+            <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+                Uraian mendalam mengenai proses, kebijakan, teknologi, dan peran masyarakat dalam pengelolaan sampah di Indonesia.
+            </p>
+            <div class="rounded-2xl overflow-hidden mb-8 shadow-lg">
+                <img src="../../asset/images/pengsampah.jpg" alt="Organic waste composting" class="w-full h-auto object-cover">
+            </div>
+            <div class="flex flex-wrap gap-4 mb-8" onclick="alert('males hehehe')">
+                <button class="flex items-center space-x-2 px-5 py-3 bg-white border-2 border-gray-300 rounded-full font-semibold text-gray-700 hover:border-emerald-600 hover:text-emerald-600 transition-all shadow-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <span>Download PDF</span>
+                </button>
+            </div>
+            <div class="flex flex-wrap gap-3 pb-8 border-b b    order-gray-200">
+                <span class="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold">#organic</span>
+                <span class="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold">#anorganic</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-[#FDFFF7] rounded-2xl shadow-sm p-6 sm:p-10 lg:p-12">
+                <div class="article-content">
+                    <p>
+                   Sampah yang kita hasilkan biasanya kita buang ke tempat sampah dan kemudian kita bawa ke Tempat Penampungan Sementara (TPS). TPS yaitu tempat sebelum sampah diangkut ke tempat pendauran ulang, pengolahan, dan atau tempat pengolahan sampah terpadu. Dari TPS, sampah akan diangkut dan dibawa oleh Dinas Lingkungan menggunakan truk sampah ke Tempat Pemrosesan Akhir (TPA). TPA adalah tempat untuk memproses dan mengembalikan sampah ke media lingkungan secara aman bagi manusia dan lingkungan.
+                    <br><br>
+                    Sampah yang dikelola berdasarkan UU Nomor 18 Tahun 2008 terdiri atas sampah rumah tangga, sampah sejenis sampah rumah tangga, dan sampah spesifik. Sampah rumah tangga berasal dari kegiatan sehari-hari masyarakat, tidak termasuk tinja dan sampah berbahaya. Sampah sejenis sampah rumah tangga berasal dari kawasan komersial, kawasan industri, fasilitas sosial, fasilitas umum, dan fasilitas lainnya. Sedangkan sampah spesifik adalah sampah yang mengandung bahan berbahaya dan beracun, sampah yang timbul akibat bencana, puing bangunan, sampah yang tidak dapat diolah dengan teknologi biasa, serta sampah yang timbul tidak secara periodik.
+                    <br><br>
+                    Pengelolaan sampah di Indonesia dibagi menjadi dua kelompok besar, yaitu pengelolaan sampah rumah tangga dan sampah sejenis rumah tangga, serta pengelolaan sampah spesifik. Pengelolaan sampah spesifik merupakan tanggung jawab pemerintah, sedangkan pengelolaan sampah rumah tangga dilakukan melalui dua pendekatan utama yaitu pengurangan sampah dan penanganan sampah. Pengurangan sampah meliputi pembatasan timbulan sampah, pendauran ulang sampah, dan pemanfaatan kembali sampah. Dalam proses ini, pemerintah pusat, pemerintah daerah, pelaku usaha, dan masyarakat memiliki perannya masing-masing.
+                    <br><br>
+                    Penanganan sampah mencakup beberapa tahapan yaitu pemilahan sampah berdasarkan jenis dan sifatnya, pengumpulan sampah ke tempat pengolahan residu, pengangkutan sampah dari fasilitas pengolahan residu ke TPA, pengolahan sampah dengan cara mengubah karakteristik dan komposisi sampah, serta pemrosesan akhir untuk mengembalikan sampah atau residu hasil pengolahan ke lingkungan secara aman.
+                    <br><br>
+                    Selain proses dasar di atas, pengelolaan sampah yang ideal juga melibatkan penerapan prinsip 3R yaitu Reduce, Reuse, dan Recycle. Reduce berarti mengurangi produk atau barang sekali pakai yang menambah timbulan sampah. Reuse berarti menggunakan kembali barang yang masih layak pakai agar tidak langsung menjadi sampah. Recycle berarti mengolah sampah menjadi bahan baru atau barang lain yang memiliki nilai guna. Prinsip 3R merupakan fondasi utama pengelolaan sampah modern karena dapat mengurangi jumlah sampah dari sumbernya.
+                    <br><br>
+                    Beberapa kota di Indonesia telah menerapkan sistem bank sampah untuk meningkatkan budaya memilah dan mendaur ulang. Bank sampah memungkinkan masyarakat menabung sampah yang bernilai ekonomis seperti plastik, kertas, dan logam untuk kemudian ditukar dengan uang atau barang tertentu. Sistem ini membantu masyarakat memahami bahwa sampah sebenarnya memiliki nilai jika dikelola dengan baik.
+                    <br><br>
+                    Selain pengolahan tradisional, beberapa daerah mulai menerapkan teknologi pengolahan sampah modern. Teknologi tersebut antara lain pengomposan aerob dan anaerob skala besar, biodigester untuk menghasilkan biogas, insinerator ramah lingkungan untuk membakar sampah residu, serta fasilitas Material Recovery Facility (MRF) yang berfungsi memisahkan sampah bernilai jual dari sampah residu. Teknologi-teknologi ini membantu mengurangi volume sampah yang masuk ke TPA dan meningkatkan efisiensi pemanfaatan sampah.
+                    <br><br>
+                    Namun, pengelolaan sampah di Indonesia masih menghadapi banyak tantangan. Salah satu masalah terbesar adalah TPA yang masih menggunakan sistem open dumping atau penumpukan terbuka sehingga menimbulkan pencemaran tanah, air, dan udara. Selain itu, kurangnya kesadaran masyarakat untuk memilah sampah sejak dari rumah mengakibatkan proses pengolahan menjadi jauh lebih sulit dan mahal. Infrastruktur pengangkutan sampah juga sering tidak memadai, sehingga banyak sampah yang akhirnya dibuang sembarangan ke sungai, selokan, atau area kosong.
+                    <br><br>
+                    Di sisi lain, peran rumah tangga sangat penting dalam mengurangi jumlah sampah. Kegiatan yang dapat dilakukan di rumah antara lain memisahkan sampah organik dan anorganik, membuat kompos dari sisa makanan, membawa tas belanja sendiri untuk mengurangi kantong plastik, serta memilih produk yang dapat digunakan kembali. Langkah sederhana seperti ini dapat membantu mengurangi beban pengelolaan sampah secara keseluruhan.
+                    <br><br>
+                    Sekolah, komunitas, dan lingkungan sosial juga memiliki peran besar dalam membentuk budaya peduli sampah. Banyak sekolah kini menerapkan program zero waste school atau program pemilahan sampah di kelas. Komunitas lokal dapat mengadakan kegiatan seperti bersih sungai, bersih pantai, kampanye lingkungan, dan pengumpulan sampah daur ulang. Kegiatan ini membantu meningkatkan kesadaran masyarakat mengenai pentingnya mengurangi sampah.
+                    <br><br>
+                    Pemerintah pusat dan daerah wajib membiayai penyelenggaraan pengelolaan sampah, dan pembiayaan ini berasal dari APBN dan APBD. Pemerintah juga dapat memberikan kompensasi kepada masyarakat yang terdampak oleh kegiatan penanganan sampah di TPA. Kompensasi tersebut dapat berupa relokasi, pemulihan lingkungan, biaya kesehatan, pengobatan, dan bentuk lainnya.
+                    <br><br>
+                    Masyarakat juga dapat berperan aktif dalam memberikan masukan, saran, dan pertimbangan kepada pemerintah mengenai kebijakan pengelolaan sampah. Selain itu, masyarakat juga berhak terlibat dalam penyelesaian sengketa apabila terdapat masalah terkait kegiatan persampahan.
+                    <br><br>
+                    Melalui pemahaman yang lebih dalam mengenai bagaimana sampah dikelola di Indonesia, kita dapat menyadari bahwa pengelolaan sampah bukan hanya tugas pemerintah, tetapi juga tugas kita sebagai individu. Dengan membuang sampah pada tempatnya, mengurangi penggunaan plastik, serta mengolah sampah sejak dari rumah, kita dapat membantu menciptakan lingkungan yang lebih bersih, sehat, dan berkelanjutan untuk generasi yang akan datang.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-16" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-merry text-2xl font-bold text-gray-900 mb-8">Related Resources</h3>
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer" onclick="window.location.href='organicanorganic.html'">
+                        <img src="../../asset/images/artc.jpeg" alt="organic anorganic" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg mb-2 text-gray-900">Organic and Inorganic waste</h4>
+                            <p class="text-gray-600 text-sm">Learn the differences and how to manage them</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer" onclick="window.location.href='envpollution.html'">
+                        <img src="../../asset/images/pencemaran.jpg" alt="environmental pollution" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg mb-2 text-gray-900">Environmental Pollution</h4>
+                            <p class="text-gray-600 text-sm">Learn the basic of environment pollution</p>
+                        </div>
+                    </div>
+                      <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer" onclick="window.location.href='climatechange.html'">
+                        <img src="../../asset/images/perubahaniklim.jpg " alt="climate change" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg mb-2 text-gray-900">Climate Change</h4>
+                            <p class="text-gray-600 text-sm">How waste contributes to global warming and why it matters</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#121212] py-12 text-white" data-aos="fade-up" data-aos-duration="500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold">
+                            <img src="../../asset/images/logo.png" alt="">
+                        </div>
+                        <span class="text-xl font-bold">GreenPedia</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Interactive and modern environmental education for a greener Indonesia.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <a href="../../index.html" class="block hover:text-emerald-400 transition-colors">Home</a>
+                        <a href="../../about.html" class="block hover:text-emerald-400 transition-colors">About</a>
+                        <a href="../../education.html" class="block hover:text-emerald-400 transition-colors">Education</a>
+                        <a href="../../contact.html" class="block hover:text-emerald-400 transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <div class="space-y-2 text-gray-400 text-sm">
+                        <p>Email: info@greenpedia.id</p>
+                        <p>Phone: +62 123 4567 890</p>
+                        <p>Location: Jakarta, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 GreenPedia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../../asset/js/resourc.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+     AOS.init();
+    </script>
+</body>
+</html>
