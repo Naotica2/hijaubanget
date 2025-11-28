@@ -1,0 +1,37 @@
+       .nav-link {
+            color: #4b5563;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: #168A0B;
+        }
+        
+        .nav-link-active {
+            color: #168A0B;
+            font-weight: 600;
+        }
+        
+        .stat-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(22, 138, 11, 0.2);
+        }
+
+        .mission-card {
+            transition: all 0.3s ease;
+        }
+
+        .mission-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .stat-card:hover {
+                transform: translateY(-3px);
+            }
+        }
