@@ -1,0 +1,93 @@
+        .font-merry {
+            font-family: 'Merriweather', serif;
+        }
+        .font-arimo {
+            font-family: 'Arimo', sans-serif;
+        }
+        .nav-link {
+            color: #1f2937;
+            position: relative;
+            padding-bottom: 4px;
+        }
+        .rotating-star {
+            animation: rotate 4s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .star-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            fill: #ABF257;
+            filter: drop-shadow(0 0 8px rgba(171, 242, 87, 0.4));
+        }
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .input-field {
+            transition: all 0.3s ease;
+        }
+        .input-field:focus {
+            border-color: #168A0B;
+            box-shadow: 0 0 0 3px rgba(22, 138, 11, 0.1);
+            outline: none;
+        }
+        .btn-send {
+            background: linear-gradient(135deg, #449C38 0%, #168A0B 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-send:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(22, 138, 11, 0.3);
+        }
+        .btn-send:active:not(:disabled) {
+            transform: translateY(0);
+        }
+        .btn-send:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .success-message {
+            animation: slideIn 0.5s ease;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #168A0B;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.8s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
